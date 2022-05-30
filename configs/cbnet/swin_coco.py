@@ -332,6 +332,7 @@ train_pipeline = [
     #         filter_lost_elements=True),
     #     keymap={
     #         'img': 'image',
+    #         'gt_masks': 'masks',
     #         'gt_bboxes': 'bboxes'
     #     },
     #     update_pad_shape=False,

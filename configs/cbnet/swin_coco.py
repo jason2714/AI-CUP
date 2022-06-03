@@ -116,7 +116,8 @@ model = dict(
                 conv_out_channels=256,
                 num_classes=1,
                 loss_mask=dict(
-                    type='CrossEntropyLoss', use_mask=True, loss_weight=1.0)),
+                    type='CrossEntropyLoss', use_mask=True, loss_weight=1.0)
+            ),
             dict(
                 type='HTCMaskHead',
                 num_convs=4,
@@ -392,5 +393,5 @@ data = dict(
 evaluation = dict(metric=['bbox', 'segm'])
 # CUDA_VISIBLE_DEVICES=3 python -m torch.distributed.launch tools/train.py configs/cbnet/swin_coco.py --gpus 1 --deterministic --seed 123  --work-dir work_dirs/swin_coco_v3
 # CUDA_VISIBLE_DEVICES=2 python -m torch.distributed.launch --master_port 29501 tools/train.py configs/cbnet/swin_coco.py --gpus 1 --deterministic --seed 123  --work-dir work_dirs/swin_coco_v3
-# CUDA_VISIBLE_DEVICES=2 python tools/test.py configs/cbnet/swin_coco.py work_dirs/swin_coco_v2/epoch_5.pth --out result.json --show --show-dir ckpt --coco
+# CUDA_VISIBLE_DEVICES=2 python tools/test.py configs/cbnet/swin_coco.py work_dirs/swin_coco_v2/epoch_5.pth --out result_seg.json --show --show-dir ckpt/yun --coco
 # CUDA_VISIBLE_DEVICES=2 python tools/test.py configs/cbnet/swin_coco.py work_dirs/swin_coco_v2/epoch_5.pth --eval bbox segm

@@ -199,7 +199,7 @@ def WBF(predictions, weights, iou_thr=0.95, width=1716, height=942):
 
 if __name__ == '__main__':
     base_dir = Path('results')
-    pred_file_names = ['v3', 'v5', 'custom_v14-6', 'mingking']
+    pred_file_names = ['v3', 'v5', 'custom_v14-6', 'yun']
     # 0.930 0.928 0.934 0.938
     pred_weights = [2, 1, 5, 8]
     pred_file_paths = [base_dir / pred_file_name / 'result.json' for pred_file_name in pred_file_names]

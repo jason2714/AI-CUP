@@ -125,7 +125,7 @@ data
 ```
 
 ## STAS Detection Train
-**Please only use single gpu for train**     
+**Please only use a single GPU for train**     
 ```bash
 # First, train on the semantic segmentation annotations
 # The original pretrained model must be placed in the ckpt folder first
@@ -143,7 +143,7 @@ python -m torch.distributed.launch tools/train.py
 ```
 
 ## STAS Detection Evaluate
-**Please only use single gpu for inference**    
+**Please only use a single GPU for inference**    
 
 ```bash
 # You need to complete all previous training or download the competition model

@@ -75,10 +75,10 @@ data
 ```python
 'images': [
     {
-        'file_name': 'COCO_val2014_000000001268.jpg',
-        'height': 427,
-        'width': 640,
-        'id': 1268
+        'file_name': '00000395.jpg',
+        'height': 942,
+        'width': 1716,
+        'id': 00000395
     },
     ...
 ],
@@ -89,19 +89,19 @@ data
             247.09,
             ...
             219.03,
-            249.06]],  # 如果有 mask 标签
+            249.06]],
         'area': 1035.749,
         'iscrowd': 0,
-        'image_id': 1268,
+        'image_id': 00000395,
         'bbox': [192.81, 224.8, 74.73, 33.43],
-        'category_id': 16,
-        'id': 42986
+        'category_id': 0,
+        'id': 5555
     },
     ...
 ],
 
 'categories': [
-    {'id': 0, 'name': 'car'},
+    {'id': 0, 'name': 'stas'},
  ]
 ```
 
@@ -110,14 +110,12 @@ data
 
 [
     {
-        'filename': 'a.jpg',
-        'width': 1280,
-        'height': 720,
+        'filename': '00000395.jpg',
+        'width': 1716,
+        'height': 942,
         'ann': {
             'bboxes': <np.ndarray, float32> (n, 4),
-            'labels': <np.ndarray, int64> (n, ),
-            'bboxes_ignore': <np.ndarray, float32> (k, 4),
-            'labels_ignore': <np.ndarray, int64> (k, ) （可选字段）
+            'labels': <np.ndarray, int64> (n, )
         }
     },
     ...

@@ -131,11 +131,11 @@ data
 please only use single gpu for train and inference 
 ```bash
 python -m torch.distributed.launch tools/train.py 
-    work_dirs/swin_coco/swin_coco.py  
+    configs/cbnet/swin_coco.py
     --gpus 1 --deterministic --seed 123  
     --work-dir work_dirs/swin_coco
 python -m torch.distributed.launch tools/train.py 
-    work_dirs/swin_custom_fine/swin_custom_fine.py 
+    configs/cbnet/swin_custom_fine.py 
     --gpus 1 --deterministic --seed 123  
     --work-dir work_dirs/swin_custom_fine
 ```

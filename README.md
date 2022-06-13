@@ -151,7 +151,7 @@ python tools/test.py
 
 ## Other Links
 > **Original CBNet**: See [CBNet: A Novel Composite Backbone Network Architecture for Object Detection](https://github.com/VDIGPKU/CBNet).    
-> **Origin CBNetV2 Github** [VDIGPKU CBNetV2](https://github.com/VDIGPKU/CBNetV2)
+> **Origin CBNetV2 Github**: See [VDIGPKU CBNetV2](https://github.com/VDIGPKU/CBNetV2)
 ## Citation
 If you use our code/model, please consider to cite our paper [CBNetV2: A Novel Composite Backbone Network Architecture for Object Detection](http://arxiv.org/abs/2107.00420).
 ```

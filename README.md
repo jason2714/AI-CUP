@@ -7,9 +7,6 @@ pip install torch==1.10.1+cu102 torchvision==0.11.2+cu102 torchaudio==0.10.1 -f 
 python setup.py install
 # python setup.py develop
 pip install mmcv-full==1.4.0 -f https://download.openmmlab.com/mmcv/dist/cu102/torch1.10.0/index.html
-pip install -U albumentations
-pip install shapely
-pip install ensemble-boxes
 ```
 
 ### Apex Installation:

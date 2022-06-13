@@ -37,7 +37,9 @@ put pretrained pth model in **ckpt** folder (AI-CUP/ckpt)
 >[origin config](https://github.com/VDIGPKU/CBNetV2/blob/main/configs/cbnet/htc_cbv2_swin_base_patch4_window7_mstrain_400-1400_giou_4conv1f_adamw_20e_coco.py)     
    
 unzip competition models and configs folder and name it **work_dirs** (AI-CUP/work_dirs)  
->[competition models and configs](https://www.dropbox.com/s/xb5g1pyq6fp1vvj/work_dirs.zip?dl=0)
+>[competition models](https://www.dropbox.com/s/xb5g1pyq6fp1vvj/work_dirs.zip?dl=0)
+>[competition segmentation config](https://github.com/jason2714/AI-CUP/blob/main/configs/cbnet/swin_coco.py)
+>[competition detection config](https://github.com/jason2714/AI-CUP/blob/main/configs/cbnet/swin_custom_fine.py)
 
 ## Preprocess STAS Data and Annotations
 put data and annotations in **data** folder (AI-CUP/data)    
@@ -71,6 +73,59 @@ data
         |-- STAS_train.pkl
         `-- STAS_val.pkl
 ```
+### COCO Format For Segmentation Annotations (json)
+
+```python
+'images': [
+    {
+        'file_name': 'COCO_val2014_000000001268.jpg',
+        'height': 427,
+        'width': 640,
+        'id': 1268
+    },
+    ...
+],
+
+'annotations': [
+    {
+        'segmentation': [[192.81,
+            247.09,
+            ...
+            219.03,
+            249.06]],  # 如果有 mask 标签
+        'area': 1035.749,
+        'iscrowd': 0,
+        'image_id': 1268,
+        'bbox': [192.81, 224.8, 74.73, 33.43],
+        'category_id': 16,
+        'id': 42986
+    },
+    ...
+],
+
+'categories': [
+    {'id': 0, 'name': 'car'},
+ ]
+```
+
+### Middle Format For Detection Annotations (pickle)
+```python
+
+[
+    {
+        'filename': 'a.jpg',
+        'width': 1280,
+        'height': 720,
+        'ann': {
+            'bboxes': <np.ndarray, float32> (n, 4),
+            'labels': <np.ndarray, int64> (n, ),
+            'bboxes_ignore': <np.ndarray, float32> (k, 4),
+            'labels_ignore': <np.ndarray, int64> (k, ) （可选字段）
+        }
+    },
+    ...
+]
+```
 
 ## STAS Detection Train
 please only use single gpu for train and inference 
@@ -96,7 +151,7 @@ python tools/test.py
 
 ## Other Links
 > **Original CBNet**: See [CBNet: A Novel Composite Backbone Network Architecture for Object Detection](https://github.com/VDIGPKU/CBNet).
-
+> **[Origin CBNetV2 Github](https://github.com/VDIGPKU/CBNetV2)** 
 ## Citation
 If you use our code/model, please consider to cite our paper [CBNetV2: A Novel Composite Backbone Network Architecture for Object Detection](http://arxiv.org/abs/2107.00420).
 ```

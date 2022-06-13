@@ -34,9 +34,9 @@ put pretrained pth model in **ckpt** folder (AI-CUP/ckpt)
 >[origin config](https://github.com/VDIGPKU/CBNetV2/blob/main/configs/cbnet/htc_cbv2_swin_base_patch4_window7_mstrain_400-1400_giou_4conv1f_adamw_20e_coco.py)     
    
 unzip competition models and configs folder and name it **work_dirs** (AI-CUP/work_dirs)  
->[competition models](https://www.dropbox.com/s/xb5g1pyq6fp1vvj/work_dirs.zip?dl=0)
->[competition segmentation config](https://github.com/jason2714/AI-CUP/blob/main/configs/cbnet/swin_coco.py)
->[competition detection config](https://github.com/jason2714/AI-CUP/blob/main/configs/cbnet/swin_custom_fine.py)
+>[competition models](https://www.dropbox.com/s/xb5g1pyq6fp1vvj/work_dirs.zip?dl=0)    
+>[competition segmentation config](https://github.com/jason2714/AI-CUP/blob/main/configs/cbnet/swin_coco.py)    
+>[competition detection config](https://github.com/jason2714/AI-CUP/blob/main/configs/cbnet/swin_custom_fine.py)    
 
 ## Preprocess STAS Data and Annotations
 put data and annotations in **data** folder (AI-CUP/data)    
